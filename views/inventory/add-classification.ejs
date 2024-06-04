@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Classification</title>
+</head>
+<body>
+    <h1>Add New Classification</h1>
+    
+    <!-- Display Flash Messages -->
+    <% if (message) { %>
+        <div><%= message %></div>
+    <% } %>
+
+    <!-- Classification Form with Client-side Validation -->
+    <form action="/inventory/add-classification" method="POST">
+        <label for="classificationName">Classification Name:</label>
+        <input type="text" id="classificationName" name="classificationName" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

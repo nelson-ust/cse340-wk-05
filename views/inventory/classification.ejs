@@ -1,0 +1,17 @@
+<!-- classification.ejs -->
+
+<% if (title) { %>
+  <h1><%= title %></h1>
+  <%# messages() %>
+  <%- grid %>
+
+  <!-- Assuming vehicle.id is the unique identifier for each vehicle -->
+  <% vehicles.forEach(vehicle => { %>
+    <a href="/inv/detail/<%= vehicle.id %>" title="View <%= vehicle.make %> <%= vehicle.model %> details">
+      <!-- Add vehicle thumbnail or other relevant content here -->
+    </a>
+  <% }) %>
+
+<% } else { %>
+  <p>No classification details available.</p>
+<% } %>

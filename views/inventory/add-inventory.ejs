@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Inventory</title>
+</head>
+<body>
+    <h1>Add New Inventory</h1>
+    
+    <!-- Display Flash Messages -->
+    <% if (message) { %>
+        <div><%= message %></div>
+    <% } %>
+
+    <!-- Inventory Form with Client-side Validation and Sticky Inputs -->
+    <form action="/inventory/add-inventory" method="POST">
+        <label for="vehicleName">Vehicle Name:</label>
+        <input type="text" id="vehicleName" name="vehicleName" value="<%= vehicleName ? vehicleName : '' %>" required>
+        
+        <!-- Other form fields for inventory details -->
+
+        <!-- Select list for classifications (populated dynamically) -->
+        <label for="classification">Classification:</label>
+        <select id="classification" name="classification" required>
+            <% classifications.forEach(function(classification) { %>
+                <option value="<%= classification.id %>" <%= (classification.id == selectedClassification) ? 'selected' : '' %>><%= classification.name %></option>
+            <% }); %>
+        </select>
+        
+        <!-- Default image paths for image inputs -->
+        <input type="text" id="imagePath" name="imagePath" value="default_image_path.jpg" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

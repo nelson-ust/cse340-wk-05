@@ -1,0 +1,29 @@
+<!-- /views/inventory/detailView.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detail View</title>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/css/detailView.css">
+</head>
+<body>
+  
+<% if (htmlContent) { %>
+  <div class="vehicle-detail">
+    <%- htmlContent %>
+  </div>
+  <% } else { %>
+    <p>No details available for this vehicle.</p>
+  <% } %>
+</body>
+</html>
+
+
+
+
+
+  

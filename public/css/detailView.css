@@ -1,0 +1,75 @@
+/* Reset some default styling */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Vehicle Detail Styles */
+  .vehicle-detail {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .vehicle-details {
+    text-align: center;
+  }
+  
+  .vehicle-details h1 {
+    font-size: 25px;
+    color: #333;
+  }
+  
+  .vehicle-details img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .vehicle-detail {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 0;
+        padding: 20px;
+      }
+
+    .details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .details p {
+      margin: 5px 0;
+    }
+  }
+  
